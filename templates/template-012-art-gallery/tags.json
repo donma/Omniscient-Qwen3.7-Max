@@ -1,0 +1,33 @@
+{
+  "id": "template-012",
+  "name": "Art Gallery",
+  "industryCategory": "藝術文化",
+  "industry": [
+    "藝廊"
+  ],
+  "colors": [
+    "深灰",
+    "深色底"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "響應式設計",
+    "Bootstrap 5",
+    "繁體中文",
+    "SEO 優化",
+    "Schema.org",
+    "FAQ",
+    "表單假送出",
+    "圖片豐富"
+  ],
+  "layout": [
+    "Left Rail Nav",
+    "minimal"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

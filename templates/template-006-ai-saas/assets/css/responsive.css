@@ -1,0 +1,125 @@
+/* ============================================
+   T006 AI SaaS — Responsive 三斷點
+   ============================================ */
+
+/* --- Tablet: ≤ 1024px --- */
+@media (max-width: 1024px) {
+  .nav-menu { display: none; }
+  .header-cta { display: none; }
+  .hamburger { display: flex; }
+
+  /* Bento Hero */
+  .bento-hero {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .bento-main { grid-column: 1 / 3; grid-row: 1 / 2; padding: 36px; }
+  .bento-screenshot { grid-column: 1 / 3; grid-row: 2 / 3; }
+
+  /* Grids */
+  .bento-features { grid-template-columns: repeat(2, 1fr); }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .bento-grid .bento-wide { grid-column: span 2; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-card:last-child { grid-column: span 2; max-width: 50%; margin: 0 auto; }
+
+  /* Data Highlights */
+  .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .vision-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Layouts */
+  .booking-grid { grid-template-columns: 1fr; gap: 40px; }
+  .service-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-brand { grid-column: span 2; }
+
+  .section { padding: 72px 0; }
+}
+
+/* --- Mobile Large: ≤ 768px --- */
+@media (max-width: 768px) {
+  :root { --header-h: 64px; }
+
+  /* Bento Hero */
+  .bento-hero { grid-template-columns: 1fr; }
+  .bento-main { grid-column: 1; grid-row: auto; padding: 28px; }
+  .bento-screenshot { grid-column: 1; grid-row: auto; }
+  .bento-main h1 { font-size: 1.8rem; }
+  .bento-main .hero-actions { flex-direction: column; }
+  .bento-main .hero-actions a { text-align: center; justify-content: center; }
+
+  /* Grids → single column */
+  .bento-features { grid-template-columns: 1fr; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-grid .bento-wide { grid-column: span 1; }
+  .services-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-card:last-child { grid-column: span 1; max-width: 100%; }
+
+  /* Data */
+  .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .highlight-item .highlight-num { font-size: 2.2rem; }
+
+  /* About */
+  .vision-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Process */
+  .process-timeline::before { left: 24px; }
+  .step-number { width: 48px; height: 48px; font-size: 1rem; }
+  .process-step { gap: 20px; }
+  .step-content { padding: 24px; }
+
+  /* Form */
+  .form-row { grid-template-columns: 1fr; }
+  .booking-form { padding: 28px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-brand { grid-column: span 1; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* Page Hero */
+  .page-hero { padding: calc(var(--header-h) + 40px) 0 40px; }
+  .page-hero h1 { font-size: 1.8rem; }
+
+  .section { padding: 56px 0; }
+  .section-header { margin-bottom: 40px; }
+}
+
+/* --- Mobile Small: ≤ 480px --- */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+
+  .bento-main { padding: 24px; }
+  .bento-card { padding: 24px; }
+  .bento-stat .stat-number { font-size: 2rem; }
+
+  .highlights-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .highlight-item .highlight-num { font-size: 1.8rem; }
+
+  .team-grid { grid-template-columns: 1fr; }
+
+  .clients-track { gap: 24px; }
+  .clients-track span { font-size: 0.95rem; }
+
+  .cta-actions { flex-direction: column; align-items: center; }
+
+  .back-to-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
+
+  .section { padding: 44px 0; }
+}

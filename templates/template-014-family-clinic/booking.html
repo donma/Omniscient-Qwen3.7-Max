@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>線上預約 — Family Clinic 家庭診所</title>
+<meta name="description" content="Family Clinic 線上預約掛號，選擇科別、醫師與時段，快速方便完成預約。">
+<meta property="og:title" content="線上預約 — Family Clinic 家庭診所">
+<meta property="og:description" content="選擇科別、醫師與時段，線上預約快速方便。">
+<meta property="og:image" content="assets/img/preview.jpg">
+<meta property="og:type" content="website">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+<div class="header-inner">
+<a href="index.html" class="logo"><span class="cross-icon"><i class="bi bi-plus-lg"></i></span> Family Clinic<span>家庭診所</span></a>
+<nav class="nav-menu">
+<a href="index.html">首頁</a><a href="about.html">診所簡介</a>
+<div class="nav-dropdown"><a href="services.html">科別介紹</a><div class="dropdown-menu-custom"><a href="service-detail.html">家庭醫學科</a><a href="service-detail.html">兒科</a><a href="service-detail.html">內科</a><a href="service-detail.html">牙科</a><a href="service-detail.html">皮膚科</a><a href="service-detail.html">婦科</a></div></div>
+<a href="portfolio.html">設備環境</a><a href="blog.html">健康知識</a><a href="contact.html">聯絡我們</a>
+</nav>
+<a href="tel:02-2300-6688" class="header-phone"><i class="bi bi-telephone-fill"></i> 02-2300-6688</a>
+<a href="booking.html" class="header-cta">立即預約</a>
+<button class="hamburger" aria-label="選單"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="mobile-overlay"></div>
+<div class="mobile-drawer">
+<a href="index.html">首頁</a><a href="about.html">診所簡介</a><a href="services.html">科別介紹</a>
+<a href="service-detail.html">家庭醫學科</a><a href="service-detail.html">兒科</a><a href="service-detail.html">內科</a>
+<a href="service-detail.html">牙科</a><a href="service-detail.html">皮膚科</a><a href="service-detail.html">婦科</a>
+<a href="portfolio.html">設備環境</a><a href="reviews.html">病患評價</a><a href="blog.html">健康知識</a>
+<a href="faq.html">就醫 FAQ</a><a href="booking.html">線上預約</a><a href="contact.html">聯絡我們</a>
+</div>
+
+<!-- Page Header -->
+<section class="page-header">
+<div class="container">
+<h1>線上預約掛號</h1>
+<p>填寫以下表單，選擇科別、醫師與時段，輕鬆完成預約</p>
+<div class="breadcrumb-custom"><a href="index.html">首頁</a> / <span>線上預約</span></div>
+</div>
+</section>
+
+<!-- Booking Form -->
+<section class="section-padding">
+<div class="container">
+<div class="booking-form">
+<form class="booking-form-inner">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="name"><i class="bi bi-person me-1"></i>姓名 *</label>
+<input type="text" id="name" placeholder="請輸入姓名" required>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label for="phone"><i class="bi bi-telephone me-1"></i>聯絡電話 *</label>
+<input type="tel" id="phone" placeholder="09xx-xxx-xxx" required>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label for="email"><i class="bi bi-envelope me-1"></i>電子郵件</label>
+<input type="email" id="email" placeholder="example@email.com">
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="department"><i class="bi bi-grid me-1"></i>選擇科別 *</label>
+<select id="department" required>
+<option value="">-- 請選擇科別 --</option>
+<option>家庭醫學科</option>
+<option>兒科</option>
+<option>內科</option>
+<option>牙科</option>
+<option>皮膚科</option>
+<option>婦科</option>
+</select>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label for="doctor"><i class="bi bi-person-badge me-1"></i>選擇醫師</label>
+<select id="doctor">
+<option value="">-- 不指定 / 依科別安排 --</option>
+<option>陳建宏 醫師</option>
+<option>林雅芳 醫師</option>
+<option>王志偉 醫師</option>
+<option>張芷瑜 醫師</option>
+<option>李俊賢 醫師</option>
+<option>黃詩涵 醫師</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="date"><i class="bi bi-calendar3 me-1"></i>預約日期 *</label>
+<input type="date" id="date" required>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label for="time"><i class="bi bi-clock me-1"></i>預約時段 *</label>
+<select id="time" required>
+<option value="">-- 請選擇時段 --</option>
+<option>上午 08:30-09:00</option>
+<option>上午 09:00-09:30</option>
+<option>上午 09:30-10:00</option>
+<option>上午 10:00-10:30</option>
+<option>上午 10:30-11:00</option>
+<option>上午 11:00-11:30</option>
+<option>下午 14:00-14:30</option>
+<option>下午 14:30-15:00</option>
+<option>下午 15:00-15:30</option>
+<option>下午 15:30-16:00</option>
+<option>晚間 18:30-19:00</option>
+<option>晚間 19:00-19:30</option>
+<option>晚間 19:30-20:00</option>
+<option>晚間 20:00-20:30</option>
+</select>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label for="is-new"><i class="bi bi-person-check me-1"></i>就診身份</label>
+<select id="is-new">
+<option>初診（第一次來診）</option>
+<option>回診（複診追蹤）</option>
+</select>
+</div>
+<div class="form-group">
+<label for="symptoms"><i class="bi bi-chat-left-text me-1"></i>症狀描述</label>
+<textarea id="symptoms" placeholder="請簡述您的症狀或就醫需求，以利醫師提前了解..."></textarea>
+</div>
+<div style="text-align:center;margin-top:24px;">
+<button type="submit" class="btn-primary-custom" style="padding:14px 48px;font-size:1rem;"><i class="bi bi-calendar-check"></i> 確認預約</button>
+</div>
+<p style="text-align:center;font-size:.8rem;color:var(--color-text-muted);margin-top:16px;">* 預約確認將透過 LINE 或簡訊通知，請於看診當日攜帶健保卡提前 15 分鐘報到。</p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+<div class="footer-top-line"></div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col"><div class="footer-logo"><span class="cross-icon"><i class="bi bi-plus-lg"></i></span> Family Clinic</div><p>Family Clinic 家庭診所成立於 2004 年，秉持「以家庭為中心」的醫療理念，為社區居民提供溫暖、專業的醫療照護服務。</p><div class="footer-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-line"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div></div>
+<div class="footer-col"><h5>科別介紹</h5><a href="service-detail.html">家庭醫學科</a><a href="service-detail.html">兒科</a><a href="service-detail.html">內科</a><a href="service-detail.html">牙科</a><a href="service-detail.html">皮膚科</a><a href="service-detail.html">婦科</a></div>
+<div class="footer-col"><h5>醫師團隊</h5><a href="about.html">陳建宏 醫師</a><a href="about.html">林雅芳 醫師</a><a href="about.html">王志偉 醫師</a><a href="about.html">張芷瑜 醫師</a><a href="about.html">李俊賢 醫師</a><a href="about.html">黃詩涵 醫師</a></div>
+<div class="footer-col"><h5>聯絡我們</h5><p><i class="bi bi-geo-alt me-1"></i> 台北市中正區忠孝西路一段 88 號 2F</p><p><i class="bi bi-telephone me-1"></i> 02-2300-6688</p><p><i class="bi bi-envelope me-1"></i> info@familyclinic.tw</p><p><i class="bi bi-clock me-1"></i> 週一至六 08:30–21:00</p></div>
+</div>
+</div>
+<div class="footer-bottom"><div class="container">© 2024 Family Clinic 家庭診所 All Rights Reserved. ｜ 圖片僅作為設計示意，正式交付前請替換為授權圖片。</div></div>
+</footer>
+<button class="back-to-top" aria-label="回到頂部"><i class="bi bi-chevron-up"></i></button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

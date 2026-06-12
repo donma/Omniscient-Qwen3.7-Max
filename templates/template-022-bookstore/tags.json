@@ -1,0 +1,33 @@
+{
+  "id": "template-022",
+  "name": "Bookstore",
+  "industryCategory": "文化零售",
+  "industry": [
+    "書店"
+  ],
+  "colors": [
+    "暖棕",
+    "淺色底"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "響應式設計",
+    "Bootstrap 5",
+    "繁體中文",
+    "SEO 優化",
+    "Schema.org",
+    "FAQ",
+    "表單假送出",
+    "圖片豐富"
+  ],
+  "layout": [
+    "Knowledge Hub",
+    "knowledge-hub"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

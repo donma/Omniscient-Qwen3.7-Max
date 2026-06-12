@@ -1,0 +1,24 @@
+{
+  "tags": [
+    "family-clinic",
+    "medical",
+    "healthcare",
+    "dentist",
+    "pediatrics",
+    "家庭診所",
+    "牙醫",
+    "醫療",
+    "白藍信任",
+    "split-trust",
+    "professional",
+    "light-theme",
+    "bootstrap5",
+    "responsive",
+    "appointment-booking",
+    "健康知識",
+    "就醫流程"
+  ],
+  "industries": ["家庭診所", "牙醫診所", "醫療中心", "社區醫院"],
+  "styles": ["乾淨專業", "信任感", "白藍配色", "圓角卡片", "Split Layout"],
+  "features": ["線上預約", "科別介紹", "醫師團隊", "就醫流程", "FAQ", "健康知識"]
+}

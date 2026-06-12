@@ -1,0 +1,131 @@
+/* ============================================
+   Pet Clinic — Responsive Styles
+   Breakpoints: 992px / 768px / 576px
+   ============================================ */
+
+/* ---------- Tablet: 992px ---------- */
+@media (max-width: 991.98px) {
+  :root { --header-h: 70px; }
+
+  .desktop-nav { display: none; }
+  .hamburger { display: flex; }
+
+  .hero-row {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero-text { order: 2; }
+  .hero-image { order: 1; margin-bottom: 30px; }
+  .hero-text p { margin-left: auto; margin-right: auto; }
+  .hero-btns { justify-content: center; }
+  .hero-text h1 { font-size: 2.2rem; }
+
+  .hero-split { min-height: auto; }
+  .hero-split::before { display: none; }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-row { gap: 30px; }
+
+  .section-padding { padding: 60px 0; }
+  .section-title { margin-bottom: 36px; }
+}
+
+/* ---------- Mobile: 768px ---------- */
+@media (max-width: 767.98px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+
+  .hero-text h1 { font-size: 1.8rem; }
+  .hero-image img { max-width: 360px; }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .portfolio-item img { height: 160px; }
+
+  .page-banner { padding: 50px 20px 35px; }
+  .page-banner h1 { font-size: 1.6rem; }
+
+  .emergency-banner h3 { font-size: 1.3rem; }
+  .emergency-banner::before { display: none; }
+
+  .stats-row { gap: 20px; }
+  .stat-item .stat-num { font-size: 1.8rem; }
+
+  .section-padding { padding: 50px 0; }
+
+  .header-phone span { display: none; }
+
+  .cta-section { padding: 50px 20px; }
+  .cta-section h2 { font-size: 1.5rem; }
+
+  .process-step { margin-bottom: 20px; }
+
+  .blog-card .blog-body { padding: 16px; }
+  .blog-card h4 { font-size: .95rem; }
+
+  .map-placeholder { height: 200px; }
+}
+
+/* ---------- Small Mobile: 576px ---------- */
+@media (max-width: 575.98px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+
+  .hero-text h1 { font-size: 1.5rem; }
+  .hero-image img { max-width: 280px; }
+  .hero-text p { font-size: .95rem; }
+
+  .hero-btns { flex-direction: column; align-items: center; }
+  .hero-btns .btn-primary-custom,
+  .hero-btns .btn-outline-custom { width: 100%; max-width: 280px; }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-pet { padding: 22px 18px; }
+  .service-card { padding: 26px 18px; }
+
+  .btn-primary-custom,
+  .btn-outline-custom,
+  .btn-emergency { padding: 10px 24px; font-size: .9rem; }
+
+  .footer-grid { text-align: center; }
+
+  .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 1rem; }
+
+  .faq-question { padding: 14px 18px; font-size: .93rem; }
+  .faq-answer-inner { padding: 0 18px 14px; }
+
+  .mobile-drawer { width: 260px; }
+
+  .contact-info-card { padding: 22px 16px; }
+
+  .review-card { padding: 22px 18px; }
+
+  .blog-detail-content p { font-size: .95rem; }
+
+  .section-title h2 { font-size: 1.3rem; }
+  .section-title h2::after { width: 40px; }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "template-001",
+  "name": "Luxury Bar",
+  "industryCategory": "餐飲甜點",
+  "industry": ["酒吧", "餐酒館", "夜間活動品牌"],
+  "colors": ["深色底", "黑金色", "低光源"],
+  "backgroundMode": "dark",
+  "features": ["酒單展示", "活動展示", "訂位 CTA", "地圖區塊", "Instagram 連結", "FAQ", "表單假送出", "強 SEO", "LocalBusiness Schema", "圖片豐富"],
+  "layout": ["大圖沉浸式 Hero", "影音 / 氛圍導向", "餐飲形象站"],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

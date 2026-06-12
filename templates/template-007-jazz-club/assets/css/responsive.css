@@ -1,0 +1,145 @@
+/* ============================================
+   Template-007 Jazz Club — Responsive CSS
+   Three breakpoints: 1200 / 992 / 768
+   ============================================ */
+
+/* --- Large screens < 1200px --- */
+@media (max-width: 1200px) {
+  :root { --container-max: 960px; }
+
+  .header-nav-left, .header-nav-right { gap: 18px; }
+  .header-nav-left a, .header-nav-right a { font-size: 0.85rem; }
+
+  .ambiance-gallery { grid-template-columns: repeat(3, 1fr); }
+  .amb-item:first-child { grid-column: span 2; grid-row: span 1; }
+
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-item.wide { grid-column: span 2; }
+
+  .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; }
+}
+
+/* --- Medium screens < 992px --- */
+@media (max-width: 992px) {
+  :root { --header-height: 68px; }
+
+  .header-nav-left, .header-nav-right { display: none; }
+  .hamburger { display: block; }
+  .header-inner { justify-content: flex-start; }
+  .logo-center { margin: 0 auto; }
+
+  .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+  .hero-sub { font-size: 1rem; }
+
+  .section { padding: 70px 0; }
+
+  .story-grid { grid-template-columns: 1fr; gap: 36px; }
+  .story-image img { height: 300px; }
+
+  .artist-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+
+  .ambiance-gallery { grid-template-columns: repeat(2, 1fr); }
+  .amb-item:first-child { grid-column: span 2; }
+  .amb-item img { height: 200px; }
+
+  .drinks-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+  .review-grid { grid-template-columns: 1fr; }
+
+  .detail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .detail-image img { height: 320px; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+
+  .blog-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: span 2; }
+
+  .show-table td { padding: 14px 10px; }
+  .show-genre { font-size: 0.75rem; padding: 3px 10px; }
+}
+
+/* --- Small screens < 768px --- */
+@media (max-width: 768px) {
+  :root { --container-max: 100%; }
+
+  .container { padding: 0 16px; }
+
+  .section { padding: 56px 0; }
+  .section-title { font-size: 1.5rem; }
+  .section-desc { font-size: 0.95rem; }
+
+  .hero { min-height: 90vh; }
+  .hero-content { padding: 0 16px; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-sub { font-size: 0.95rem; margin-bottom: 28px; }
+  .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
+  .hero-actions .btn-gold,
+  .hero-actions .btn-outline { width: 100%; justify-content: center; max-width: 280px; }
+
+  .page-hero { padding: 120px 0 60px; }
+  .page-hero h1 { font-size: 1.6rem; }
+
+  .story-grid { gap: 24px; }
+  .story-image img { height: 240px; }
+  .story-stats { gap: 20px; flex-wrap: wrap; }
+  .stat-num { font-size: 1.5rem; }
+
+  .artist-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .artist-card img { height: 200px; }
+
+  .ambiance-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .amb-item:first-child { grid-column: span 2; }
+  .amb-item img { height: 160px; }
+
+  .drinks-grid { grid-template-columns: 1fr; }
+  .drink-card-img img { height: 180px; }
+
+  .show-table { font-size: 0.9rem; }
+  .show-table td { padding: 12px 6px; }
+  .show-date { font-size: 0.95rem; min-width: 80px; }
+  .show-artist { font-size: 0.9rem; }
+  .show-time { display: none; }
+
+  .portfolio-grid { grid-template-columns: 1fr; gap: 12px; }
+  .portfolio-item.wide { grid-column: span 1; }
+  .portfolio-item img { height: 220px; }
+
+  .review-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-card-img img { height: 180px; }
+
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .form-group.full { grid-column: span 1; }
+
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-image img { height: 260px; }
+  .detail-content h1 { font-size: 1.5rem; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .cta-banner { padding: 56px 0; }
+  .cta-banner h2 { font-size: 1.5rem; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand { grid-column: span 1; }
+
+  .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+}
+
+/* --- Extra small < 480px --- */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.5rem; }
+  .artist-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .ambiance-gallery { grid-template-columns: 1fr; }
+  .amb-item:first-child { grid-column: span 1; }
+  .logo-center { font-size: 1.2rem; }
+}

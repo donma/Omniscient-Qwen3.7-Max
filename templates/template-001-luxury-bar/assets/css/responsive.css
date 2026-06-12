@@ -1,0 +1,48 @@
+/* T001 Luxury Bar — Responsive */
+@media(max-width:991px){
+  .nav-menu,.header-cta{display:none}
+  .hamburger{display:flex}
+  .story-grid{grid-template-columns:1fr;gap:40px}
+  .story-image{height:360px}
+  .drinks-grid{grid-template-columns:repeat(2,1fr)}
+  .ambiance-gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .ambiance-gallery .amb-item:first-child{grid-row:auto}
+  .event-cards{grid-template-columns:1fr}
+  .service-item,.service-item:nth-child(even){grid-template-columns:1fr;direction:ltr}
+  .service-item:nth-child(even)>*{direction:ltr}
+  .booking-grid,.contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .about-values{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-info-cards{grid-template-columns:1fr}
+  .detail-features{grid-template-columns:1fr}
+}
+@media(max-width:767px){
+  :root{--section-padding:60px}
+  .hero h1{font-size:2.2rem}
+  .hero-sub{font-size:.95rem}
+  .drinks-grid{grid-template-columns:1fr}
+  .ambiance-gallery{grid-template-columns:1fr}
+  .story-stats{flex-direction:column;gap:20px}
+  .about-values{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:center}
+  .cta-banner h2{font-size:1.8rem}
+  .footer-grid{grid-template-columns:1fr}
+  .event-card{flex-direction:column;gap:12px}
+  .contact-map{height:250px}
+}
+@media(max-width:575px){
+  .container{padding:0 16px}
+  .hero{min-height:500px}
+  .section-title{font-size:1.6rem}
+  .story-image{height:260px}
+  .drink-card-img{height:220px}
+  .service-item-img{height:260px}
+  .blog-detail-hero{height:250px}
+  .detail-hero-img{height:260px}
+}

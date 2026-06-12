@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>深入解析 Transformer 架構 — NeuralFlow AI Blog</title>
+<meta name="description" content="全面拆解 Transformer 的核心設計原理，包含 Self-Attention、Multi-Head Attention 與 Position Encoding 的數學推導。">
+<link rel="canonical" href="">
+<meta property="og:title" content="深入解析 Transformer 架構 — NeuralFlow AI Blog">
+<meta property="og:description" content="Transformer 核心設計原理的完整技術解析。">
+<meta property="og:image" content="assets/img/preview.jpg">
+<meta property="og:type" content="article">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"深入解析 Transformer 架構","author":{"@type":"Person","name":"林芷萱"},"datePublished":"2026-06-01"}</script>
+</head>
+<body>
+<!-- Header -->
+<header class="site-header"><div class="container"><div class="header-inner">
+<a href="index.html" class="logo"><span class="logo-icon"><i class="bi bi-cpu"></i></span>NeuralFlow<span>AI Platform</span></a>
+<nav class="nav-menu"><a href="index.html">首頁</a><a href="services.html">產品功能</a><a href="portfolio.html">解決方案</a><a href="faq.html">定價方案</a><a href="blog.html" class="active">技術文件</a><a href="contact.html">聯絡我們</a></nav>
+<a href="booking.html" class="header-cta">免費試用</a>
+<button class="hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+</div></div></header>
+<div class="mobile-overlay"></div>
+<div class="mobile-menu"><a href="index.html">首頁</a><a href="services.html">產品功能</a><a href="portfolio.html">解決方案</a><a href="faq.html">定價方案</a><a href="blog.html">技術文件</a><a href="contact.html">聯絡我們</a><a href="about.html">關於我們</a><a href="booking.html">免費試用</a></div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+<div class="container">
+<span class="section-label">Deep Dive</span>
+<h1>深入解析 <span class="gradient-text">Transformer</span> 架構</h1>
+<p>從 Self-Attention 到多頭注意力機制的完整技術解析</p>
+<div class="breadcrumb"><a href="index.html">首頁</a><span>/</span><a href="blog.html">技術文章</a><span>/</span><span>Transformer 架構解析</span></div>
+</div>
+</section>
+
+<!-- Blog Detail -->
+<section class="section">
+<div class="container">
+<div class="blog-detail">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="Transformer 架構示意圖" class="blog-hero-img">
+<div class="blog-meta">
+<span><i class="bi bi-person"></i> 林芷萱 (CTO)</span>
+<span><i class="bi bi-calendar3"></i> 2026-06-01</span>
+<span><i class="bi bi-clock"></i> 閱讀 15 分鐘</span>
+<span><i class="bi bi-tag"></i> NLP</span>
+</div>
+
+<h2>為什麼 Transformer 改變了一切？</h2>
+<p>2017 年 Google 發表的 <em>"Attention Is All You Need"</em> 論文徹底改變了自然語言處理的格局。在此之前，RNN 和 LSTM 是序列建模的主流架構，但它們面臨著無法平行處理和長距離依賴衰減的問題。Transformer 的出現，用純粹的注意力機制取代了循環結構，不僅解決了這些問題，更為後來的大規模語言模型 (GPT、BERT、PaLM) 奠定了基礎。</p>
+
+<blockquote>「Transformer 的核心洞見非常簡潔：不需要循環或卷積，僅靠注意力機制就能捕捉序列中的所有依賴關係。」— Vaswani et al., 2017</blockquote>
+
+<h2>Self-Attention 機制</h2>
+<p>Self-Attention（自注意力）是 Transformer 最核心的組件。它的計算過程可以簡潔地描述為：對於輸入序列中的每個元素，計算它與序列中所有其他元素的相關性分數，然後用這些分數對值向量進行加權求和。</p>
+<p>具體而言，Self-Attention 使用三個可學習的矩陣 <code>W_Q</code>、<code>W_K</code>、<code>W_V</code> 將輸入 <code>X</code> 投影為 Query、Key 和 Value 三個矩陣：</p>
+
+<pre><code>Q = X · W_Q
+K = X · W_K
+V = X · W_V
+
+Attention(Q, K, V) = softmax(Q · K^T / √d_k) · V</code></pre>
+
+<p>其中 <code>d_k</code> 是 Key 向量的維度，除以 <code>√d_k</code> 是為了防止點積結果過大導致 softmax 梯度消失。</p>
+
+<h2>Multi-Head Attention</h2>
+<p>單一注意力頭只能捕捉一種特定的關聯模式。Multi-Head Attention 透過將 Q、K、V 投影到多個子空間，讓模型能夠同時關注不同類型的依賴關係。例如，一個頭可能關注語法結構，另一個頭可能關注語義相似性。</p>
+
+<pre><code>MultiHead(Q, K, V) = Concat(head_1, ..., head_h) · W_O
+where head_i = Attention(Q·W_Qi, K·W_Ki, V·W_Vi)</code></pre>
+
+<p>在標準 Transformer 中，通常使用 8 個注意力頭。每個頭的維度為 <code>d_model / h</code>，其中 <code>d_model</code> 是模型維度（通常為 512 或更大），<code>h</code> 是頭的數量。</p>
+
+<h2>Position Encoding</h2>
+<p>由於 Transformer 不包含循環結構，它本身無法感知序列中元素的順序。因此需要加入位置編碼 (Positional Encoding) 來為模型提供位置信息。原始論文使用的是正弦/餘弦編碼：</p>
+<p>這種編碼方式的優點是能夠表達相對位置關係，因為對於任意固定偏移量 <code>k</code>，<code>PE(pos+k)</code> 可以表示為 <code>PE(pos)</code> 的線性函數。</p>
+
+<h2>在 NeuralFlow 中的應用</h2>
+<p>NeuralFlow 的 NLP 引擎基於 Transformer 架構進行了多項工程優化，使其在企業級應用場景中表現更優：</p>
+<ul class="feature-list">
+<li><i class="bi bi-check-circle-fill"></i> <div><strong style="color:var(--text-primary)">KV Cache 優化</strong>：使用 Key-Value 快取減少推理階段的重複計算，將生成速度提升 3-5 倍</div></li>
+<li><i class="bi bi-check-circle-fill"></i> <div><strong style="color:var(--text-primary)">Flash Attention</strong>：採用 IO-aware 的注意力計算演算法，降低記憶體開銷並加速訓練</div></li>
+<li><i class="bi bi-check-circle-fill"></i> <div><strong style="color:var(--text-primary)">混合精度推理</strong>：支援 FP16/BF16 混合精度，在保持準確率的同時減少計算資源消耗</div></li>
+<li><i class="bi bi-check-circle-fill"></i> <div><strong style="color:var(--text-primary)">動態 batching</strong>：智慧合併不同長度的請求，最大化 GPU 利用率</div></li>
+</ul>
+
+<p>這些優化讓 NeuralFlow 的 NLP API 能夠在 <code>200ms</code> 以內完成推理，同時支援百萬級並發請求。</p>
+
+<h2>結論</h2>
+<p>Transformer 不僅是一個模型架構，更代表了一種「用注意力取代一切」的設計哲學。從 NLP 到電腦視覺 (ViT)，從語音識別到蛋白質結構預測，Transformer 的應用範圍持續擴展。在 NeuralFlow，我們持續追蹤 Transformer 的最新研究進展，並將優化成果回饋到產品中，讓每位開發者都能享有最先進的 AI 推理能力。</p>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+<div class="container">
+<h2>想使用基於 Transformer 的 <span class="gradient-text">NLP API</span>？</h2>
+<p>NeuralFlow 提供經過深度優化的 NLP 推理引擎，14 天免費試用。</p>
+<div class="cta-actions">
+<a href="booking.html" class="btn-primary"><i class="bi bi-rocket-takeoff"></i> 免費試用</a>
+<a href="blog.html" class="btn-outline"><i class="bi bi-arrow-left"></i> 返回文章列表</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon"><i class="bi bi-cpu"></i></span>NeuralFlow<span>AI Platform</span></a><p>下一代智慧 AI SaaS 平台，助力企業實現智慧轉型與營運效率最大化。</p></div>
+<div class="footer-col"><h4>產品</h4><a href="services.html">產品功能</a><a href="portfolio.html">解決方案</a><a href="faq.html">定價方案</a><a href="process.html">導入流程</a></div>
+<div class="footer-col"><h4>資源</h4><a href="blog.html">技術文章</a><a href="faq.html">常見問題</a><a href="blog-detail.html">API 文件</a><a href="portfolio.html">成功案例</a></div>
+<div class="footer-col"><h4>公司</h4><a href="about.html">關於我們</a><a href="reviews.html">客戶評價</a><a href="contact.html">聯絡我們</a><a href="booking.html">預約Demo</a></div>
+</div><div class="footer-bottom"><p>&copy; 2026 NeuralFlow AI. All rights reserved.</p><div class="footer-social"><a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div></div></footer>
+<button class="back-to-top" aria-label="回到頂部"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

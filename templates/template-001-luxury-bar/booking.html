@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>訂位須知 — Luxury Bar</title>
+<meta name="description" content="線上預約 Luxury Bar 訂位，填寫表單即可完成預約。了解訂位須知、取消政策與特別服務，輕鬆預訂您的黑金之夜。">
+<link rel="canonical" href="">
+<meta property="og:title" content="訂位須知 — Luxury Bar">
+<meta property="og:description" content="線上預約訂位，輕鬆預訂您的黑金之夜。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1551539926-1c28eb91b5b3?w=1200&q=80">
+<meta property="og:type" content="website">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<header class="site-header"><div class="container"><div class="header-inner">
+<a href="index.html" class="logo">LUXURY BAR<span>黑金餐酒館</span></a>
+<nav class="nav-menu"><a href="index.html">首頁</a><a href="about.html">品牌故事</a><a href="services.html">精選酒單</a><a href="portfolio.html">空間環境</a><a href="blog.html">活動預告</a><a href="booking.html" class="active">訂位須知</a></nav>
+<a href="booking.html" class="header-cta">立即訂位</a>
+<button class="hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+</div></div></header>
+<div class="mobile-overlay"></div>
+<div class="mobile-menu"><a href="index.html">首頁</a><a href="about.html">品牌故事</a><a href="services.html">精選酒單</a><a href="portfolio.html">空間環境</a><a href="blog.html">活動預告</a><a href="booking.html">訂位須知</a><a href="contact.html">聯絡我們</a><a href="faq.html">常見問題</a></div>
+
+<section class="page-hero"><div class="container"><h1>訂位預約</h1><p>填寫表單預約您的專屬座位，開啟今晚的黑金體驗</p></div></section>
+
+<section class="section">
+<div class="container">
+<div class="booking-grid">
+<div class="booking-form">
+<span class="section-label">Reservation</span>
+<h2>線上訂位表單</h2>
+<p style="margin-bottom:32px;color:rgba(255,255,255,0.7)">請填寫以下資訊，我們將在 2 小時內以簡訊或 Email 確認您的訂位。如需即時訂位，請致電 02-2700-8888。</p>
+
+<form id="bookingForm">
+<div class="form-group">
+<label for="name">姓名 <span style="color:#d4af37">*</span></label>
+<input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
+</div>
+<div class="form-group">
+<label for="phone">聯絡電話 <span style="color:#d4af37">*</span></label>
+<input type="tel" id="phone" name="phone" placeholder="例：0912-345-678" required>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="date">預約日期 <span style="color:#d4af37">*</span></label>
+<input type="date" id="date" name="date" required>
+</div>
+<div class="form-group">
+<label for="time">預約時間 <span style="color:#d4af37">*</span></label>
+<select id="time" name="time" required>
+<option value="">請選擇時段</option>
+<option value="18:00">18:00</option>
+<option value="18:30">18:30</option>
+<option value="19:00">19:00</option>
+<option value="19:30">19:30</option>
+<option value="20:00">20:00</option>
+<option value="20:30">20:30</option>
+<option value="21:00">21:00</option>
+<option value="21:30">21:30</option>
+<option value="22:00">22:00</option>
+<option value="22:30">22:30</option>
+<option value="23:00">23:00</option>
+<option value="23:30">23:30</option>
+</select>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="guests">用餐人數 <span style="color:#d4af37">*</span></label>
+<select id="guests" name="guests" required>
+<option value="">請選擇人數</option>
+<option value="1">1 位</option>
+<option value="2">2 位</option>
+<option value="3">3 位</option>
+<option value="4">4 位</option>
+<option value="5">5 位</option>
+<option value="6">6 位</option>
+<option value="7">7 位</option>
+<option value="8">8 位以上（請來電預約）</option>
+</select>
+</div>
+<div class="form-group">
+<label for="area">座位偏好</label>
+<select id="area" name="area">
+<option value="any">無偏好</option>
+<option value="bar">吧台區</option>
+<option value="sofa">沙發區</option>
+<option value="terrace">空中露台</option>
+<option value="vip">VIP 包廂（需來電確認）</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label for="occasion">特殊場合</label>
+<select id="occasion" name="occasion">
+<option value="">無</option>
+<option value="birthday">生日慶祝</option>
+<option value="anniversary">紀念日</option>
+<option value="business">商務洽談</option>
+<option value="proposal">求婚驚喜</option>
+<option value="other">其他</option>
+</select>
+</div>
+<div class="form-group">
+<label for="notes">特殊需求</label>
+<textarea id="notes" name="notes" rows="4" placeholder="如有過敏原、飲食限制、慶祝佈置需求或其他特殊要求，請在此告知我們。"></textarea>
+</div>
+<button type="submit" class="btn-gold" style="width:100%;margin-top:16px"><i class="bi bi-calendar-check"></i> 確認訂位</button>
+</form>
+
+<div class="form-success" id="formSuccess" style="display:none">
+<i class="bi bi-check-circle"></i>
+<h3>訂位成功！</h3>
+<p>感謝您的預約，我們已收到您的訂位資訊。確認通知將在 2 小時內發送至您的手機與 Email。如需修改或取消，請致電 02-2700-8888。</p>
+</div>
+</div>
+
+<div class="booking-info">
+<div class="info-block">
+<h3><i class="bi bi-clock"></i> 營業時間</h3>
+<p>週一至週日<br>18:00 - 02:00</p>
+<p style="font-size:0.9rem;color:rgba(255,255,255,0.6)">廚房 L.O. 01:00<br>吧台 L.O. 01:30</p>
+</div>
+
+<div class="info-block">
+<h3><i class="bi bi-telephone"></i> 聯絡方式</h3>
+<p><strong>電話：</strong>02-2700-8888</p>
+<p><strong>Email：</strong>reserve@luxurybar.tw</p>
+<p><strong>LINE：</strong>@luxurybar</p>
+</div>
+
+<div class="info-block">
+<h3><i class="bi bi-info-circle"></i> 訂位須知</h3>
+<ul>
+<li>低消每位 NT$ 500（空中露台每位 NT$ 800）</li>
+<li>訂位保留時間為 15 分鐘，逾時視同取消</li>
+<li>週末及節假日建議提前 1 週預約</li>
+<li>VIP 包廂需提前 2 週預約，最低消費 NT$ 8,000 起</li>
+<li>未滿 18 歲禁止入場，入場需查驗身份證件</li>
+<li>Dress Code：Smart Casual（精緻休閒）</li>
+</ul>
+</div>
+
+<div class="info-block">
+<h3><i class="bi bi-x-circle"></i> 取消與變更政策</h3>
+<ul>
+<li>取消訂位請於 <strong>24 小時前</strong>通知，以免產生取消費用</li>
+<li>當日取消或未出席，將收取低消金額 50% 作為取消費用</li>
+<li>VIP 包廂取消需提前 72 小時通知</li>
+<li>變更時間或人數，請於 12 小時前聯繫我們</li>
+</ul>
+</div>
+
+<div class="info-block">
+<h3><i class="bi bi-gift"></i> 特別服務</h3>
+<p>我們提供以下加值服務（需提前預約）：</p>
+<ul>
+<li>生日驚喜佈置：NT$ 1,500 起</li>
+<li>求婚花束與氣球佈置：NT$ 3,000 起</li>
+<li>客製化調酒命名：免費</li>
+<li>專屬攝影師 1 小時：NT$ 5,000 起</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo">LUXURY BAR<span>黑金餐酒館</span></div><p class="footer-desc">城市之巅的黑金夜生活體驗。</p></div><div class="footer-col"><h4>營業資訊</h4><ul class="footer-links"><li>週一至週日 18:00 - 02:00</li><li>台北市大安區忠孝東路四段</li><li>電話：02-2700-8888</li></ul></div><div class="footer-col"><h4>快速連結</h4><ul class="footer-links"><li><a href="about.html">品牌故事</a></li><li><a href="services.html">精選酒單</a></li><li><a href="portfolio.html">空間環境</a></li><li><a href="booking.html">訂位</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Luxury Bar. All rights reserved.</p></div></div></footer>
+<button class="back-to-top" aria-label="回到頂部"><i class="bi bi-chevron-up"></i></button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

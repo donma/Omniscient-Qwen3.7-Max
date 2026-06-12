@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全職設計視角 — 24 套完整網站樣板展示</title>
+  <meta name="description" content="全職設計視角提供 24 套完整網站樣板，每套 12 頁，涵蓋餐飲、科技、美業、生活等產業，可直接預覽與修改。">
+  <link rel="canonical" href="">
+  <meta property="og:title" content="全職設計視角 — 24 套完整網站樣板展示">
+  <meta property="og:description" content="24 套完整網站樣板，每套 12 頁，涵蓋多元產業。">
+  <meta property="og:image" content="assets/img/previews/og-cover.jpg">
+  <meta property="og:type" content="website">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="gallery-header" id="galleryHeader">
+    <div class="container-fluid px-4">
+      <nav class="gallery-nav">
+        <a href="index.html" class="gallery-brand">
+          <span class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+          <span class="brand-text">全職設計視角</span>
+        </a>
+        <ul class="gallery-menu d-none d-lg-flex">
+          <li><a href="index.html" class="active">首頁</a></li>
+          <li><a href="#templates-section">瀏覽樣板</a></li>
+          <li><a href="#about-section">使用說明</a></li>
+          <li><a href="#about-section">關於我們</a></li>
+        </ul>
+        <button class="gallery-hamburger d-lg-none" id="hamburgerBtn" aria-label="開啟選單">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="#templates-section">瀏覽樣板</a></li>
+        <li><a href="#about-section">使用說明</a></li>
+        <li><a href="#about-section">關於我們</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="gallery-hero">
+    <div class="container">
+      <div class="hero-content text-center">
+        <span class="hero-badge">24 套完整網站樣板 × 12 頁 = 288 頁</span>
+        <h1 class="hero-title">全職設計視角</h1>
+        <p class="hero-subtitle">不只是下載一個首頁，而是下載一整套可交付客戶的完整網站。<br>每套樣板涵蓋完整 12 頁，從首頁到聯絡我們，風格統一、內容豐富。</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="statTotal">24</span>
+            <span class="stat-label">套樣板</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">288</span>
+            <span class="stat-label">個頁面</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">12</span>
+            <span class="stat-label">大產業</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">13</span>
+            <span class="stat-label">種版型</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hot Tags -->
+  <section class="hot-tags-section">
+    <div class="container">
+      <div class="hot-tags-wrap">
+        <span class="hot-tags-label"><i class="bi bi-fire"></i> 熱門標籤</span>
+        <div class="hot-tags-list" id="hotTags">
+          <button class="hot-tag active" data-tag="all">全部</button>
+          <button class="hot-tag" data-tag="深色底">深色底</button>
+          <button class="hot-tag" data-tag="淺色底">淺色底</button>
+          <button class="hot-tag" data-tag="餐飲甜點">餐飲甜點</button>
+          <button class="hot-tag" data-tag="科技商務">科技商務</button>
+          <button class="hot-tag" data-tag="美容健康">美容健康</button>
+          <button class="hot-tag" data-tag="創意設計">創意設計</button>
+          <button class="hot-tag" data-tag="空間生活">空間生活</button>
+          <button class="hot-tag" data-tag="零售商品">零售商品</button>
+          <button class="hot-tag" data-tag="活動組織">活動組織</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Templates Section -->
+  <section class="templates-section" id="templates-section">
+    <div class="container-fluid px-4">
+      <div class="templates-layout">
+
+        <!-- Left Sidebar Filters -->
+        <aside class="filter-sidebar" id="filterSidebar">
+          <div class="filter-header">
+            <h3><i class="bi bi-funnel"></i> 篩選條件</h3>
+            <button class="filter-reset" id="filterReset">清除全部</button>
+          </div>
+
+          <!-- Search -->
+          <div class="filter-search">
+            <input type="text" id="searchInput" placeholder="搜尋樣板名稱、產業..." aria-label="搜尋">
+            <i class="bi bi-search"></i>
+          </div>
+
+          <!-- Industry Filter -->
+          <div class="filter-group">
+            <h4 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#filterIndustry">
+              產業分類 <i class="bi bi-chevron-down"></i>
+            </h4>
+            <div class="collapse show" id="filterIndustry">
+              <div class="filter-options">
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="全部" checked> 全部</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="餐飲甜點"> 餐飲甜點</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="美容健康"> 美容健康</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="美妝美業"> 美妝美業</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="零售商品"> 零售商品</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="科技商務"> 科技商務</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="創意設計"> 創意設計</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="空間生活"> 空間生活</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="教育課程"> 教育課程</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="活動組織"> 活動組織</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="地方品牌"> 地方品牌</label>
+                <label class="filter-option"><input type="checkbox" name="industryCategory" value="寵物服務"> 寵物服務</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Background Mode Filter -->
+          <div class="filter-group">
+            <h4 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#filterBg">
+              背景模式 <i class="bi bi-chevron-down"></i>
+            </h4>
+            <div class="collapse show" id="filterBg">
+              <div class="filter-options">
+                <label class="filter-option"><input type="checkbox" name="backgroundMode" value="全部" checked> 全部</label>
+                <label class="filter-option"><input type="checkbox" name="backgroundMode" value="dark"> 深色底</label>
+                <label class="filter-option"><input type="checkbox" name="backgroundMode" value="light"> 淺色底</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layout Type Filter -->
+          <div class="filter-group">
+            <h4 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#filterLayout">
+              版型類型 <i class="bi bi-chevron-down"></i>
+            </h4>
+            <div class="collapse show" id="filterLayout">
+              <div class="filter-options">
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="全部" checked> 全部</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="大圖沉浸式 Hero"> 大圖沉浸式 Hero</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="左右分割 Split Layout"> 左右分割 Split Layout</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Magazine 雜誌式首頁"> Magazine 雜誌式首頁</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Masonry / Portfolio 作品牆"> Masonry / Portfolio 作品牆</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Product Catalog 商品目錄型"> Product Catalog 商品目錄型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Storytelling 長卷軸"> Storytelling 長卷軸</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Bento Grid 現代資訊版"> Bento Grid 現代資訊版</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Dashboard / Data 信任型"> Dashboard / Data 信任型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Event / Campaign 活動型"> Event / Campaign 活動型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Left Rail Navigation 左側導覽型"> Left Rail 左側導覽型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Pricing-first 方案導向型"> Pricing-first 方案導向型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Knowledge Hub 知識中心型"> Knowledge Hub 知識中心型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Split Trust 專業信任型"> Split Trust 專業信任型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Fullscreen Visual 沉浸視覺型"> Fullscreen Visual 沉浸視覺型</label>
+                <label class="filter-option"><input type="checkbox" name="layoutType" value="Case Study Index 案例索引型"> Case Study Index 案例索引型</label>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="templates-content">
+          <!-- Toolbar -->
+          <div class="templates-toolbar">
+            <div class="toolbar-left">
+              <span class="result-count" id="resultCount">顯示 24 套樣板</span>
+            </div>
+            <div class="toolbar-right">
+              <div class="view-toggle">
+                <button class="view-btn active" data-view="grid" aria-label="格狀檢視"><i class="bi bi-grid-3x3-gap"></i></button>
+                <button class="view-btn" data-view="list" aria-label="列表檢視"><i class="bi bi-list-ul"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Templates Grid -->
+          <div class="templates-grid" id="templatesGrid">
+            <!-- JS renders cards here -->
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state d-none" id="emptyState">
+            <i class="bi bi-search"></i>
+            <h3>找不到符合條件的樣板</h3>
+            <p>請嘗試調整篩選條件或清除搜尋關鍵字</p>
+            <button class="btn btn-outline-primary" id="emptyReset">清除篩選</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Instructions Section -->
+  <section class="about-section" id="about-section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">使用說明</h2>
+          <div class="about-card">
+            <div class="about-step">
+              <span class="step-num">1</span>
+              <div>
+                <h4>瀏覽與篩選</h4>
+                <p>使用左側篩選面板，依產業分類、背景模式、版型類型篩選適合的樣板。</p>
+              </div>
+            </div>
+            <div class="about-step">
+              <span class="step-num">2</span>
+              <div>
+                <h4>預覽樣板</h4>
+                <p>點擊「預覽網站」按鈕，在新分頁中查看完整網站效果。</p>
+              </div>
+            </div>
+            <div class="about-step">
+              <span class="step-num">3</span>
+              <div>
+                <h4>查看 Prompt</h4>
+                <p>每套樣板附有專屬 AI Prompt，可用於重新生成或修改風格。</p>
+              </div>
+            </div>
+            <div class="about-step">
+              <span class="step-num">4</span>
+              <div>
+                <h4>下載與修改</h4>
+                <p>ZIP 打包功能開發中，目前可直接開啟 templates 資料夾中的 HTML 檔案進行修改。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title">關於全職設計視角</h2>
+          <p class="about-text">全職設計視角是一套完整網站樣板展示系統，專為設計師、業務、網站製作人員、接案工作者與中小企業網站製作團隊打造。</p>
+          <p class="about-text">每套樣板包含完整 12 頁，從首頁到聯絡我們，風格統一、內容豐富、可直接用瀏覽器開啟。不是下載一個首頁，而是下載一整套可交付客戶的完整網站。</p>
+          <div class="about-features">
+            <div class="feature-item"><i class="bi bi-check-circle-fill text-success"></i> 24 套獨特風格樣板</div>
+            <div class="feature-item"><i class="bi bi-check-circle-fill text-success"></i> 每套固定 12 頁完整內容</div>
+            <div class="feature-item"><i class="bi bi-check-circle-fill text-success"></i> 繁體中文選單與文案</div>
+            <div class="feature-item"><i class="bi bi-check-circle-fill text-success"></i> 完整 RWD 響應式設計</div>
+            <div class="feature-item"><i class="bi bi-check-circle-fill text-success"></i> 純 HTML/CSS/JS 無需建置</div>
+            <div class="feature-item"><i class="bi bi-check-circle-fill text-success"></i> SEO 結構化資料支援</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gallery-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+            <span>全職設計視角</span>
+          </div>
+          <p class="footer-desc">24 套完整網站樣板展示系統，涵蓋多元產業與版型，為設計師與網站製作人員打造的靈感與交付資源庫。</p>
+        </div>
+        <div class="col-lg-4">
+          <h5>快速連結</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="#templates-section">瀏覽樣板</a></li>
+            <li><a href="#about-section">使用說明</a></li>
+            <li><a href="#about-section">關於我們</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>專案資訊</h5>
+          <ul class="footer-links">
+            <li>樣板數量：24 套</li>
+            <li>頁面總數：288 頁</li>
+            <li>技術架構：HTML5 / CSS3 / JS</li>
+            <li>ZIP 打包：開發中</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>&copy; 2026 全職設計視角。AI-assisted static website template gallery。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="回到頂部">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

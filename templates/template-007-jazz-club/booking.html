@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>訂位 — Jazz Club 爵士酒吧</title>
+<meta name="description" content="Jazz Club 爵士酒吧線上訂位，輕鬆預訂您的爵士之夜。支援一般座位、VIP 包廂與包場預約。">
+<link rel="canonical" href="">
+<meta property="og:title" content="訂位 — Jazz Club 爵士酒吧">
+<meta property="og:description" content="線上輕鬆訂位，預訂您的爵士之夜。">
+<meta property="og:image" content="assets/img/preview.jpg">
+<meta property="og:type" content="website">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","name":"Jazz Club 爵士酒吧","description":"線上訂位服務","address":{"@type":"PostalAddress","streetAddress":"大安區羅斯福路三段123號B1","addressLocality":"台北市"},"openingHours":"We-Su 19:00-02:00"}</script>
+</head>
+<body>
+<header class="site-header">
+<div class="container"><div class="header-inner">
+<nav class="header-nav-left"><a href="index.html">首頁</a><a href="about.html">關於我們</a><a href="services.html">酒單餐飲</a></nav>
+<a href="index.html" class="logo-center">JAZZ CLUB<span>爵 士 酒 吧</span></a>
+<nav class="header-nav-right"><a href="portfolio.html">空間環境</a><a href="blog.html">音樂專欄</a><a href="contact.html">聯絡我們</a></nav>
+<button class="hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+<div class="header-gold-line"></div>
+</div></div>
+</header>
+<div class="mobile-overlay"></div>
+<div class="mobile-menu"><a href="index.html">首頁</a><a href="about.html">關於我們</a><a href="services.html">酒單餐飲</a><a href="service-detail.html">單品詳情</a><a href="portfolio.html">空間環境</a><a href="reviews.html">顧客評價</a><a href="blog.html">音樂專欄</a><a href="blog-detail.html">文章詳情</a><a href="faq.html">常見問題</a><a href="booking.html">訂位</a><a href="process.html">首次來訪</a><a href="contact.html">聯絡我們</a></div>
+
+<section class="page-hero">
+<div class="container">
+<h1>線上訂位</h1>
+<p>預訂您的爵士之夜，讓我們為您安排最佳座位。</p>
+<div class="breadcrumb"><a href="index.html">首頁</a> / <span>訂位</span></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="text-center" style="margin-bottom:40px;">
+<span class="section-label">Reservation</span>
+<h2 class="section-title">訂位資訊</h2>
+<p class="section-desc">請填寫以下資訊完成訂位。週五、週六建議提前 3-5 天預約。VIP 包廂請提前一週預約。</p>
+</div>
+<form class="booking-form" onsubmit="return false;">
+<div class="form-grid">
+<div class="form-group">
+<label for="name">姓名 *</label>
+<input type="text" id="name" name="name" required placeholder="請輸入您的姓名">
+</div>
+<div class="form-group">
+<label for="phone">聯絡電話 *</label>
+<input type="tel" id="phone" name="phone" required placeholder="09XX-XXX-XXX">
+</div>
+<div class="form-group">
+<label for="email">電子信箱</label>
+<input type="email" id="email" name="email" placeholder="your@email.com">
+</div>
+<div class="form-group">
+<label for="date">預約日期 *</label>
+<input type="date" id="date" name="date" required>
+</div>
+<div class="form-group">
+<label for="time">預約時段 *</label>
+<select id="time" name="time" required>
+<option value="">請選擇時段</option>
+<option value="19:00">19:00</option>
+<option value="19:30">19:30</option>
+<option value="20:00">20:00</option>
+<option value="20:30">20:30</option>
+<option value="21:00">21:00</option>
+<option value="21:30">21:30</option>
+<option value="22:00">22:00</option>
+</select>
+</div>
+<div class="form-group">
+<label for="guests">人數 *</label>
+<select id="guests" name="guests" required>
+<option value="">請選擇人數</option>
+<option value="1">1 人</option>
+<option value="2">2 人</option>
+<option value="3">3 人</option>
+<option value="4">4 人</option>
+<option value="5">5 人</option>
+<option value="6">6 人</option>
+<option value="7-10">7-10 人</option>
+<option value="10+">10 人以上（請電話洽詢）</option>
+</select>
+</div>
+<div class="form-group">
+<label for="seat-type">座位偏好</label>
+<select id="seat-type" name="seat-type">
+<option value="">不指定</option>
+<option value="bar">吧台座位</option>
+<option value="stage">舞台區（近舞台）</option>
+<option value="sofa">沙發區</option>
+<option value="vip">VIP 包廂（低消 NT$ 3,000）</option>
+</select>
+</div>
+<div class="form-group">
+<label for="occasion">特殊場合</label>
+<select id="occasion" name="occasion">
+<option value="">無</option>
+<option value="birthday">生日慶祝</option>
+<option value="anniversary">週年紀念</option>
+<option value="date">約會</option>
+<option value="business">商務聚會</option>
+<option value="other">其他</option>
+</select>
+</div>
+<div class="form-group full">
+<label for="note">備註</label>
+<textarea id="note" name="note" placeholder="特殊需求、飲食限制、或其他補充事項..."></textarea>
+</div>
+<div class="form-group full" style="text-align:center;">
+<button type="submit" class="btn-gold" style="min-width:200px;"><i class="bi bi-calendar-check"></i> 確認訂位</button>
+</div>
+</div>
+<div class="form-success" style="display:none;"></div>
+</form>
+
+<!-- 訂位須知 -->
+<div style="margin-top:60px;max-width:700px;margin-left:auto;margin-right:auto;">
+<h3 style="text-align:center;margin-bottom:20px;">訂位須知</h3>
+<ul style="color:var(--color-text-muted);padding-left:20px;line-height:2.2;">
+<li>訂位成功後，我們將以電話或簡訊確認，請保持手機暢通。</li>
+<li>遲到超過 15 分鐘且未通知，座位可能被釋放給現場等候來賓。</li>
+<li>如需取消或變更訂位，請提前 4 小時通知。</li>
+<li>低消 NT$ 400 / 人（特殊日 NT$ 600），VIP 包廂低消 NT$ 3,000 / 間。</li>
+<li>10 人以上團體訂位，請致電 02-2366-8899 由專人服務。</li>
+</ul>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand"><div class="logo">JAZZ CLUB<span>爵 士 酒 吧</span></div><p class="footer-desc">自 1998 年起，Jazz Club 致力於將最純粹的現場爵士音樂與精選酒品帶給你。</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="Spotify"><i class="bi bi-spotify"></i></a></div></div>
+<div class="footer-col"><h4>營業時間</h4><ul class="footer-links"><li>週一、週二：公休</li><li>週三至週四：19:00 - 00:00</li><li>週五至週六：19:00 - 02:00</li><li>週日：19:00 - 23:00</li></ul></div>
+<div class="footer-col"><h4>聯絡我們</h4><ul class="footer-links"><li>台北市大安區羅斯福路三段123號B1</li><li>電話：02-2366-8899</li><li>信箱：hello@jazzclub.tw</li></ul><h4 style="margin-top:20px">快速連結</h4><ul class="footer-links"><li><a href="about.html">關於我們</a></li><li><a href="faq.html">常見問題</a></li><li><a href="contact.html">聯絡我們</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 Jazz Club 爵士酒吧. All rights reserved.</p></div>
+</div>
+</footer>
+<button class="back-to-top" aria-label="回到頂部"><i class="bi bi-chevron-up"></i></button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

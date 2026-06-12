@@ -1,0 +1,55 @@
+{
+  "id": "T019",
+  "name": "沐光家居 MUJI Living",
+  "slug": "template-019-home-decor",
+  "industry": "居家佈置",
+  "description": "雜誌式編輯風格居家佈置品牌模板，暖白自然色調搭配原木質感，以對稱 grid 與大量留白呈現靜謐優雅的居家美學。",
+  "design": {
+    "style": "Magazine Editorial",
+    "layout": "symmetric-grid",
+    "hero": "magazine-editorial-symmetric",
+    "colors": {
+      "base": "#faf9f6",
+      "card": "#f0ede8",
+      "brown": "#8b7355",
+      "brownDark": "#5c4a32"
+    },
+    "fonts": {
+      "heading": "Cormorant Garamond",
+      "body": "Noto Serif TC"
+    }
+  },
+  "pages": [
+    "index.html",
+    "about.html",
+    "services.html",
+    "service-detail.html",
+    "portfolio.html",
+    "reviews.html",
+    "faq.html",
+    "booking.html",
+    "process.html",
+    "blog.html",
+    "blog-detail.html",
+    "contact.html"
+  ],
+  "features": [
+    "magazine-symmetric-grid",
+    "numbered-sections",
+    "thin-border-cards",
+    "hover-image-zoom",
+    "faq-accordion",
+    "booking-form",
+    "scroll-reveal",
+    "sticky-header",
+    "mobile-hamburger",
+    "organization-schema"
+  ],
+  "cdns": [
+    "Bootstrap 5.3.3",
+    "Bootstrap Icons 1.11.3",
+    "Google Fonts"
+  ],
+  "version": "1.0.0",
+  "createdAt": "2024-12-01"
+}

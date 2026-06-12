@@ -1,0 +1,26 @@
+{
+  "template": "template-006-ai-saas",
+  "tags": [
+    "科技商務",
+    "AI",
+    "SaaS",
+    "深色底",
+    "科技漸層",
+    "Bento Grid",
+    "科技紫",
+    "科技青",
+    "毛玻璃",
+    "漸層邊框",
+    "圖片豐富",
+    "強 SEO",
+    "繁體中文",
+    "12 頁完整版",
+    "RWD 響應式"
+  ],
+  "categories": {
+    "industry": ["AI SaaS", "科技新創", "軟體公司"],
+    "style": ["深色底", "科技感", "現代"],
+    "layout": ["Bento Grid", "CSS Grid", "不規則版型"],
+    "features": ["表單", "FAQ", "定價方案", "客戶評價", "案例展示"]
+  }
+}

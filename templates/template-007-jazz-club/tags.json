@@ -1,0 +1,16 @@
+{
+  "id": "template-007",
+  "name": "Jazz Club",
+  "industryCategory": "餐飲甜點",
+  "industry": ["爵士酒吧", "現場音樂場館", "復古餐飲品牌"],
+  "colors": ["深色底", "黑金色", "復古棕", "暖色调"],
+  "backgroundMode": "dark",
+  "features": ["演出時刻表", "駐場藝術家展示", "酒單展示", "空間環境相簿", "顧客評價", "FAQ", "訂位表單", "音樂專欄", "表單假送出", "強 SEO", "BarOrPub Schema", "圖片豐富"],
+  "layout": ["影音氛圍 Hero", "居中 Logo 選單", "復古爵士氛圍", "餐飲形象站"],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

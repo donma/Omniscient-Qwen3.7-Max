@@ -1,0 +1,150 @@
+/* =============================================
+   Template-014 Family Clinic — responsive.css
+   RWD 三斷點：992px / 768px / 576px
+   ============================================= */
+
+/* ----- Tablet: ≤ 992px ----- */
+@media (max-width: 992px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+
+  .section-padding { padding: 60px 0; }
+
+  /* Header */
+  .nav-menu, .header-phone { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .hero-text {
+    padding-right: 0;
+    order: 1;
+    margin-bottom: 32px;
+  }
+  .hero-text p { margin-left: auto; margin-right: auto; }
+  .hero-buttons { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-image { order: 2; width: 100%; }
+  .hero-image img { height: 360px; }
+  .hero-image .floating-card { left: 16px; bottom: 16px; }
+
+  /* Grids */
+  .dept-grid { grid-template-columns: repeat(2, 1fr); }
+  .doctor-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .satisfaction-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* About */
+  .about-content { grid-template-columns: 1fr; gap: 32px; }
+  .about-content img { height: 280px; }
+
+  /* Service Detail */
+  .service-detail-content { grid-template-columns: 1fr; }
+  .service-sidebar { position: static; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+  /* Process */
+  .process-steps { flex-wrap: wrap; gap: 24px; }
+  .process-step .step-connector { display: none; }
+  .process-step { flex: 0 0 45%; }
+}
+
+/* ----- Small Tablet: ≤ 768px ----- */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .hero-text h1 { font-size: 2rem; }
+
+  .section-padding { padding: 48px 0; }
+  .section-header { margin-bottom: 32px; }
+
+  /* Grids */
+  .dept-grid { grid-template-columns: 1fr; }
+  .notice-grid { grid-template-columns: 1fr; }
+
+  /* Hero stats */
+  .hero-stats { gap: 20px; flex-wrap: wrap; }
+  .hero-stats .stat h3 { font-size: 1.4rem; }
+
+  /* Doctor */
+  .doctor-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* Portfolio */
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-item img { height: 180px; }
+
+  /* Blog */
+  .blog-grid { grid-template-columns: 1fr; }
+
+  /* Satisfaction */
+  .satisfaction-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* CTA */
+  .cta-banner { padding: 48px 24px; border-radius: var(--radius-md); }
+  .cta-banner h2 { font-size: 1.5rem; }
+
+  /* Booking */
+  .booking-form { padding: 24px; }
+
+  /* Process */
+  .process-step { flex: 0 0 100%; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* ----- Mobile: ≤ 576px ----- */
+@media (max-width: 576px) {
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.35rem; }
+  .hero-text h1 { font-size: 1.65rem; }
+
+  .section-padding { padding: 40px 0; }
+
+  /* Hero */
+  .hero-image img { height: 260px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .hero-stats { flex-direction: column; gap: 12px; align-items: center; }
+
+  /* Doctor */
+  .doctor-grid { grid-template-columns: 1fr; }
+
+  /* Portfolio */
+  .portfolio-grid { grid-template-columns: 1fr; }
+
+  /* Satisfaction */
+  .satisfaction-grid { grid-template-columns: 1fr; }
+
+  /* Cert */
+  .cert-grid { grid-template-columns: 1fr; }
+
+  /* Review */
+  .review-card { padding: 20px; }
+
+  /* FAQ */
+  .faq-question { padding: 14px 16px; font-size: .95rem; }
+  .faq-answer-inner { padding: 0 16px 14px; }
+
+  /* Page Header */
+  .page-header { padding: 100px 0 36px; }
+  .page-header h1 { font-size: 1.75rem; }
+
+  /* About */
+  .about-hero { padding-top: 100px; padding-bottom: 40px; }
+
+  /* Mobile Drawer */
+  .mobile-drawer { width: 280px; right: -280px; }
+}

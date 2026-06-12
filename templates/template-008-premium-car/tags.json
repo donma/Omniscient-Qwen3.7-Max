@@ -1,0 +1,33 @@
+{
+  "id": "template-008",
+  "name": "Premium Car",
+  "industryCategory": "汽車精品",
+  "industry": [
+    "精品車商"
+  ],
+  "colors": [
+    "黑銀速度感",
+    "深色底"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "響應式設計",
+    "Bootstrap 5",
+    "繁體中文",
+    "SEO 優化",
+    "Schema.org",
+    "FAQ",
+    "表單假送出",
+    "圖片豐富"
+  ],
+  "layout": [
+    "Product Catalog",
+    "product-spotlight"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "template-020",
+  "name": "Pet Clinic",
+  "industryCategory": "寵物服務",
+  "industry": ["寵物醫院", "動物診所", "寵物照護"],
+  "colors": ["淺色底", "白綠", "溫暖專業"],
+  "backgroundMode": "light",
+  "features": [
+    "Split Trust",
+    "爪印裝飾",
+    "緊急就醫",
+    "預約 CTA",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "VeterinaryCare Schema",
+    "圖片豐富"
+  ],
+  "layout": ["Split Trust 專業信任型", "寵物醫療形象站"],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

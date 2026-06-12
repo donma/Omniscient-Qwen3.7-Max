@@ -1,0 +1,61 @@
+/* ============================================
+   T013 Beauty Studio — Responsive Styles
+   Breakpoints: 1024px / 768px / 480px
+   ============================================ */
+
+/* ---------- Tablet ≤ 1024px ---------- */
+@media(max-width:1024px){
+  .hero{flex-direction:column;min-height:auto;padding-top:80px}
+  .hero-left{padding:48px 40px}
+  .hero-right{min-height:400px;position:relative}
+  .hero-right img{position:relative;height:400px}
+
+  .about-story,.service-detail-hero,.contact-grid{grid-template-columns:1fr;gap:32px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .stats-row{grid-template-columns:repeat(2,1fr);gap:24px}
+  .form-row{grid-template-columns:1fr}
+  .service-features{grid-template-columns:1fr}
+}
+
+/* ---------- Mobile ≤ 768px ---------- */
+@media(max-width:768px){
+  .nav-menu,.header-cta{display:none}
+  .hamburger{display:flex}
+
+  .section{padding:64px 0}
+  .hero-left{padding:36px 24px}
+  .hero-right{min-height:300px}
+  .hero-right img{height:300px}
+  .hero-actions{flex-direction:column}
+  .hero-actions a{width:100%;justify-content:center}
+
+  .services-grid,.team-grid,.pricing-grid,.reviews-grid,.blog-grid,.ba-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .page-banner{padding:120px 0 48px}
+  .page-banner h1{font-size:1.8rem}
+  .booking-form{padding:32px 24px}
+
+  .stats-row{grid-template-columns:repeat(2,1fr);gap:16px}
+  .stat-item .stat-num{font-size:2rem}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .ba-images img{height:180px}
+}
+
+/* ---------- Small Mobile ≤ 480px ---------- */
+@media(max-width:480px){
+  .container{padding:0 16px}
+  h1{font-size:1.8rem}
+  h2{font-size:1.5rem}
+  .hero-left{padding:28px 16px}
+  .hero-right{min-height:240px}
+  .hero-right img{height:240px}
+  .process-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr}
+  .pricing-card{padding:32px 24px}
+  .review-card{padding:24px}
+  .faq-question{padding:16px 20px;font-size:.95rem}
+}

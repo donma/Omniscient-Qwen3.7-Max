@@ -1,0 +1,161 @@
+/* ================================================================
+   T019 Home Decor — Responsive
+   Breakpoints: 1024px (tablet), 768px (small tablet), 576px (mobile)
+   ================================================================ */
+
+/* ---------- Tablet ≤ 1024px ---------- */
+@media (max-width: 1024px) {
+  section { padding: 72px 0; }
+
+  .hero { padding: 80px 0 72px; }
+  .hero h1 { font-size: clamp(2rem, 4vw, 3rem); }
+  .hero-img img { height: 420px; }
+
+  .series-grid { gap: 28px; }
+  .series-card .card-img { height: 260px; }
+  .series-card .card-body { padding: 24px; }
+
+  .inspo-row { gap: 32px; }
+  .inspo-img { height: 320px; }
+
+  .showroom-grid { grid-template-columns: repeat(2, 1fr); }
+  .showroom-item { height: 300px; }
+
+  .brand-inner { gap: 48px; }
+  .brand-img { height: 400px; }
+
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+  .about-grid { gap: 48px; }
+  .about-img { height: 380px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+
+/* ---------- Small Tablet ≤ 768px ---------- */
+@media (max-width: 768px) {
+  section { padding: 56px 0; }
+
+  /* Header: show hamburger, hide desktop nav */
+  .nav-menu { display: none; }
+  .hamburger { display: flex; }
+  .mobile-nav { display: flex; }
+
+  .header-inner { height: 64px; }
+
+  /* Hero */
+  .hero { padding: 64px 0 56px; }
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+  .hero-img img { height: 320px; }
+  .hero .lead { font-size: 1rem; }
+
+  /* Page hero */
+  .page-hero { padding: 80px 0 56px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+
+  /* Section header */
+  .section-header { margin-bottom: 48px; }
+
+  /* Series grid → single column */
+  .series-grid { grid-template-columns: 1fr; gap: 32px; }
+  .series-card .card-img { height: 280px; }
+
+  /* Inspiration rows → stacked */
+  .inspo-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+  .inspo-row.reverse .inspo-img { order: 0; }
+  .inspo-row.reverse .inspo-text { order: 0; }
+  .inspo-img { height: 280px; }
+
+  /* Showroom */
+  .showroom-grid { grid-template-columns: 1fr; gap: 20px; }
+  .showroom-item { height: 280px; }
+
+  /* Brand */
+  .brand-inner { grid-template-columns: 1fr; gap: 40px; }
+  .brand-img { height: 320px; }
+
+  /* Portfolio */
+  .portfolio-grid { grid-template-columns: 1fr; gap: 24px; }
+  .portfolio-item .p-img { height: 240px; }
+
+  /* Reviews */
+  .review-grid { grid-template-columns: 1fr; gap: 28px; }
+  .review-card { padding: 36px 28px; }
+
+  /* Booking / Contact */
+  .booking-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-img { height: 300px; }
+
+  /* Blog */
+  .blog-grid { grid-template-columns: 1fr; gap: 24px; }
+  .blog-card .blog-img { height: 220px; }
+
+  /* Blog detail */
+  .blog-detail-header { padding: 64px 0 36px; }
+  .blog-content { padding: 40px 0; }
+
+  /* Process */
+  .process-step { gap: 24px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  /* CTA */
+  .cta-section { padding: 80px 0; }
+}
+
+/* ---------- Mobile ≤ 576px ---------- */
+@media (max-width: 576px) {
+  section { padding: 48px 0; }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero-img img { height: 240px; }
+  .hero-caption { font-size: .7rem; }
+
+  .page-hero { padding: 64px 0 40px; }
+
+  .section-header { margin-bottom: 36px; }
+  .section-header .section-num { font-size: .75rem; }
+
+  .series-card .card-img { height: 220px; }
+  .series-card .card-body { padding: 20px; }
+
+  .inspo-img { height: 220px; }
+
+  .showroom-item { height: 240px; }
+
+  .brand-img { height: 260px; }
+  .brand-text blockquote { font-size: 1.1rem; padding-left: 16px; }
+
+  .review-card { padding: 28px 20px; }
+  .review-card::before { font-size: 3.5rem; }
+
+  .btn-primary,
+  .btn-outline { padding: 12px 28px; font-size: .8rem; }
+
+  .booking-info { padding: 28px; }
+
+  .process-step { gap: 16px; padding-bottom: 40px; }
+  .step-dot { width: 40px; height: 40px; min-width: 40px; font-size: .75rem; }
+
+  .portfolio-item .p-img { height: 200px; }
+
+  .map-wrap { height: 200px; }
+
+  .site-footer { padding: 56px 0 32px; }
+}

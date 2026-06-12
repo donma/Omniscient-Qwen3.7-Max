@@ -1,0 +1,33 @@
+{
+  "id": "template-016",
+  "name": "Flower Wedding",
+  "industryCategory": "婚禮花藝",
+  "industry": [
+    "花藝婚禮"
+  ],
+  "colors": [
+    "米白浪漫",
+    "淺色底"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "響應式設計",
+    "Bootstrap 5",
+    "繁體中文",
+    "SEO 優化",
+    "Schema.org",
+    "FAQ",
+    "表單假送出",
+    "圖片豐富"
+  ],
+  "layout": [
+    "Masonry/Waterfall",
+    "masonry-gallery"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

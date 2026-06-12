@@ -1,0 +1,33 @@
+{
+  "id": "template-024",
+  "name": "Community Festival",
+  "industryCategory": "社區文化",
+  "industry": [
+    "社區活動"
+  ],
+  "colors": [
+    "繽紛高彩",
+    "淺色底"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "響應式設計",
+    "Bootstrap 5",
+    "繁體中文",
+    "SEO 優化",
+    "Schema.org",
+    "FAQ",
+    "表單假送出",
+    "圖片豐富"
+  ],
+  "layout": [
+    "Event/Festival",
+    "festival"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}
